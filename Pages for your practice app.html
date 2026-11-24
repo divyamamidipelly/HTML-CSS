@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox Practice App</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Navigation */
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        nav h2 {
+            font-size: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Home Page */
+
+        .home {
+            min-height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #dbeafe;
+        }
+
+        .home-content h1 {
+            font-size: 38px;
+            color: #1e40af;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+        }
+
+        /* List Page */
+
+        .list-section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .list-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e40af;
+        }
+
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #ccc;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.5;
+            color: #666;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .home-content h1 {
+                font-size: 28px;
+            }
+
+            .list-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav>
+
+            <h2>Flexbox App</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#list">List Page</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Home Page -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>Welcome to Flexbox Practice</h1>
+
+            <p>
+                Learn HTML, CSS and Flexbox with simple examples.
+            </p>
+
+            <a href="#list" class="btn">Explore Courses</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- List Page -->
+
+    <section class="list-section" id="list">
+
+        <h2>Our Learning Courses</h2>
+
+        <div class="list-container">
+
+            <div class="card">
+
+                <h3>HTML</h3>
+
+                <p>
+                    Learn the basics of HTML and create
+                    the structure of web pages.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>CSS</h3>
+
+                <p>
+                    Learn CSS styling, colors, fonts
+                    and responsive web design.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Learn JavaScript to make websites
+                    interactive and dynamic.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Flexbox</h3>
+
+                <p>
+                    Learn flexible layouts using
+                    CSS Flexbox properties.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Flexbox Practice App. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
